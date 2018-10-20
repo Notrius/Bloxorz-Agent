@@ -338,7 +338,7 @@ def successorState(boardMatrix, state, queue, visited, stateCosts):
 queue = []
 visited = {}
 stateCosts = {}
-boardMatrix = loadBoard("board2.txt")
+boardMatrix = loadBoard("board4.txt")
 goalStateId = getGoalStateCoords(boardMatrix)
 print(goalStateId)
 initState = getInitialState(boardMatrix)
@@ -365,6 +365,7 @@ while game is not over
 while not goalStateReached:
 
     if len(queue) > 0:
+
         currentState = queue.pop(0)
         heapq.heapify(queue) # Maintain the heap property of the queue(frontier).
         if currentState.id not in visited:
